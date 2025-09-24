@@ -243,6 +243,12 @@ body {
   flex-shrink: 0;
   background: url(<path-to-image>) rgb(255, 255, 255) 0px -14.246px / 100% 119.422% no-repeat;
 }
+.thumbnails img.active3 {
+  width: 111.442px;
+  height: 113.788px;
+  flex-shrink: 0;
+  background: url(<path-to-image>) #6B2B00 0px -14.246px / 100% 119.422% no-repeat;
+}
 
 /* Product Info */
 .product-info {
@@ -253,11 +259,20 @@ body {
   color: #f4a300;
   font-size: 14px;
   margin-bottom: 10px;
+  display: flex;
 }
 
-.rating span {
+.rating h3 {
   color: #000;
-  text-align: center;
+text-align: center;
+display: flex;
+
+/* 18/SemiBold */
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 160%; /* 28.8px */
   
   /* 18/SemiBold */
   font-family: Poppins;
@@ -273,6 +288,21 @@ font-style: normal;
 font-weight: 400;
 line-height: 160%; /* 25.6px */
 letter-spacing: 0.08px;
+margin-left: 8px;
+}
+
+.rating span{
+  color: #1D1F2C;
+text-align: center;
+
+/* 16/Regular */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+letter-spacing: 0.08px;
+margin-left: 5px;
 }
 
 .title {
@@ -321,6 +351,7 @@ padding: 10px 16px;
 justify-content: center;
 align-items: center;
 gap: 4px;
+color: #FFF;
 }
 
 .product-info h3 {
@@ -350,7 +381,11 @@ letter-spacing: 0.08px;
 }
 .frame2{
   display: flex;
-  margin: 10px 100px;
+  margin: 10px 160px;
+}
+
+.fr{
+  margin-left: 5px;
 }
 
 .features {
@@ -375,6 +410,7 @@ justify-content: center;
 align-items: center;
 gap: 8px;
 align-self: stretch;
+color: var(--White, #FFF);
 }
 
 .btn-buy:hover {
@@ -384,8 +420,14 @@ align-self: stretch;
 /* Payment options */
 .payment-options {
   display: flex;
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 24px;
+  margin-bottom: 24px;
+  margin: 24px ;
+}
+
+.payMethod{
+  width: 92px;
+height: 58px;
 }
 
 .payment-options img {
@@ -401,7 +443,7 @@ align-self: stretch;
 .accordion summary {
   cursor: pointer;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #FFD0B0;
   border-radius: 6px;
   background: #fff;
   font-weight: 500;
@@ -411,6 +453,85 @@ align-self: stretch;
   padding: 10px;
   font-size: 0.9rem;
   color: #444;
+}
+
+/*pain and solution section*/
+
+
+
+.painSolution{
+  padding: 60px 20px;
+  background: #6B2B00;
+  
+
+}
+
+.pain{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+
+}
+.painImg{
+  display: flex;
+  margin: 10px;
+}
+.painImg h2{
+  color: var(--W, #FFF);
+
+/* 48/Semi Bold */
+font-family: Montserrat;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 62.4px */
+align-self: stretch;
+letter-spacing: 0.12px;
+margin-bottom: 14px;
+}
+.painImg h4{
+  color: var(--W, #FFF);
+
+  /* 24/Semi Bold */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 31.2px */
+  letter-spacing: 0.12px;
+  align-self: stretch;
+  margin-bottom: 14px;
+}
+
+.pain p{
+  color: var(--W, #FFF);
+
+/* 16/Medium */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 25.6px */
+letter-spacing: 0.08px;
+align-self: stretch;
+margin-bottom: 14px;
+}
+
+.point{
+  display: flex;
+}
+.painPoints{
+  margin-left: 48px;
+  margin-top: 51px;
+  
+}
+.painPoints1{
+  margin-right: 48px;
+}
+.point svg{
+  margin-right: 5px;
 }
 
 /* Responsive */
@@ -505,5 +626,77 @@ align-self: stretch;
     width: 100%;
     text-align: center;
     display: block;
+  }
+}
+/*pain and solution section*/
+
+@media (max-width: 992px) {
+  .pain {
+    flex-direction: column;
+    gap: 30px;
+    display: none;
+  }
+  .painSolution{
+    display: none;
+  }
+
+  .painImg h2 {
+    font-size: 36px;
+    display: none;
+  }
+
+  .painImg h4 {
+    font-size: 20px;
+  }
+
+  .pain p {
+    font-size: 15px;
+  }
+
+  .painPoints, .painPoints1 {
+    margin: 20px 0;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  .painSolution {
+    padding: 40px 15px;
+    display: none;
+  }
+
+  .pain {
+    gap: 20px;
+    display: none
+  }
+
+  .painImg h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .painImg h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .pain p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .painPoints, .painPoints1 {
+    margin: 15px 0;
+  }
+
+  .point {
+    flex-direction: column; /* stack icon + text vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .point svg {
+    margin-bottom: 8px;
+    margin-right: 0;
   }
 }
