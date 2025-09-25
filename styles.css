@@ -1149,6 +1149,38 @@ margin-left: 1px;
 text-align: left;
 }
 
+/*-----section 7 video------*/
+.video{
+  padding: 60px 20px;
+  background: #6B2B00;
+}
+.video-container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr; /* Column widths: 3, 6, 3 */
+  gap: 18px;
+}
+.play{
+  position: absolute;
+  margin-top: 275px;
+  margin-left: 100px;
+}
+.play1{
+  position: absolute;
+  margin-top: 275px;
+  margin-left: 250px;
+}
+
+/* ----section 8 customer feedback----- */
+
+
+
 /*------------responsive section----------*/
 /* --------- Header --------- */
 
@@ -1681,4 +1713,26 @@ text-align: left;
     padding: 40px 15px;
     display: none;
   }
+}
+
+/* video responsive section*/
+
+@media (max-width: 992px) {
+  .video{
+    display: none;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  
+  .video{
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .video{
+    display: none;
+  }
+ 
 }
