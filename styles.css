@@ -1330,6 +1330,7 @@ letter-spacing: 0.08px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 50px;
 }
 
 .question h1 {
@@ -1408,6 +1409,154 @@ letter-spacing: 0.08px;
 
 
 /* ----------footer section--------------- */
+/* Base styles (already good for desktop) */
+.footer {
+  padding: 60px 20px;
+  background: #6B2B00;
+}
+
+.last {
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.last h1 {
+  color: var(--W, #FFF);
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.last p {
+  color: var(--W, #FFF);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.08px;
+  margin-bottom: 20px;
+}
+
+.order {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  background: #F60;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 40px auto;
+}
+
+.order:hover {
+  background: #e65a00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.social p {
+  margin: 0;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 500;
+  color: #FFF;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social p:hover {
+  color: #f60;
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ Responsive Tweaks */
+@media (max-width: 1024px) {
+  .last h1 {
+    font-size: 36px;
+  }
+  .last p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .last h1 {
+    font-size: 28px;
+  }
+  .last p {
+    font-size: 14px;
+  }
+  .order {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  .social {
+    gap: 15px;
+  }
+  .social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .last h1 {
+    font-size: 22px;
+  }
+  .last p {
+    font-size: 13px;
+  }
+  .order {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin: 20px auto;
+  }
+  .order svg {
+    width: 18px;
+    height: 18px;
+  }
+  .social {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .social img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 
 
 /*------------responsive section----------*/
